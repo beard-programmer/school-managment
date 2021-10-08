@@ -6,7 +6,7 @@ import { v4 as uuid } from 'uuid';
 import { LessonCreateInput } from './lesson-create.input';
 
 @Injectable()
-export class LessonService {
+export class LessonsService {
   constructor(
     @InjectRepository(LessonEntity)
     private lessonRepository: Repository<LessonEntity>,
