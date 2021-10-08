@@ -3,7 +3,7 @@ import { StudentCreateInput } from './student-create.input';
 import { StudentType } from './student.type';
 import { StudentsService } from './students.service';
 
-@Resolver((of) => StudentType)
+@Resolver(() => StudentType)
 export class StudentResolver {
   constructor(private studentsService: StudentsService) {}
 
