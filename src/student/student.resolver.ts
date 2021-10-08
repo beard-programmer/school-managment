@@ -12,6 +12,11 @@ export class StudentResolver {
     return this.studentsService.getStudents();
   }
 
+  @Query(() => StudentType)
+  student(@Args('id') id: string) {
+    return this.studentsService.getStudent(id);
+  }
+
   @Mutation(() => StudentType)
   createStudent(
     @Args('studentCreateInput') studentCreateInput: StudentCreateInput,
