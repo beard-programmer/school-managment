@@ -5,6 +5,7 @@ import { LessonEntity } from './lesson/lesson.entitiy';
 import { LessonModule } from './lesson/lesson.module';
 import { StudentEntity } from './student/student.entity';
 import { StudentModule } from './student/student.module';
+import { StudentsService } from './student/students.service';
 
 @Module({
   imports: [

@@ -24,9 +24,20 @@ export class StudentsService {
   ): Promise<StudentEntity> {
     return this.studentsRepository.save(
       this.studentsRepository.create({
-        name: studentCreateInput.name,
         id: uuid(),
+        firstName: studentCreateInput.firstName,
+        lastName: studentCreateInput.lastName,
       }),
     );
+  }
+
+  async findAll(studentIds: string[]): Promise<StudentEntity[]> {
+    return await this.studentsRepository.find({
+      where: {
+        id: {
+          $in: studentIds,
+        },
+      },
+    });
   }
 }
